@@ -1,0 +1,14 @@
+name: "trigger ci / cd related steps"
+on:
+  pull_request:
+jobs:
+  cicdsteps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: denolib/setup-deno@v2
+        with:
+         deno-version: v1.x
+      - run: |
+          deno --version
+          # deno run --allow-net https://deno.land/x/cicd/contributor-guideline-confirmation.ts
+          # deno run --allow-net https://deno.land/x/cicd/scan-for-security-vulnerabilities.ts
