@@ -1,5 +1,5 @@
 # Using a Deno based GitHub Action for CICD
 
 ## Plan
-Check whether this shall be published here: https://github.com/sap (check with OSPO)
+Check with Dominik and Team if this is valuable.
 
