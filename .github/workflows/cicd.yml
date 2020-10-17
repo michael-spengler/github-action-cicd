@@ -1,7 +1,7 @@
 name: "trigger ci / cd steps"
 on:
-  issue_comment:
-    types: [created]
+  issue_comment: # change this depending on which event you want to react
+    types: [created] 
 jobs:
   cicdsteps:
     runs-on: ubuntu-latest
@@ -9,10 +9,10 @@ jobs:
       - uses: denolib/setup-deno@v2
         with:
          deno-version: v1.x
-      - run: |
+      - run: | # uncomment the specific steps below which you want to be executed 
           deno --version
-          deno run --allow-net https://deno.land/x/cicd/post-PR-checklist.ts
-          deno run --allow-net https://deno.land/x/cicd/lint.ts
+          # deno run --allow-net https://deno.land/x/cicd/post-PR-checklist.ts
+          # deno run --allow-net https://deno.land/x/cicd/lint.ts
           # deno run --allow-net https://deno.land/x/cicd/security-scan.ts
           # deno run --allow-net https://deno.land/x/cicd/request-cla-signature.ts
           # deno run --allow-net https://deno.land/x/cicd/request-dco-signature.ts         
