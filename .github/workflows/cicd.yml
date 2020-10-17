@@ -11,7 +11,7 @@ jobs:
          deno-version: v1.x
       - run: |
           deno --version
-          deno run --allow-net https://deno.land/x/cicd/post-PR-checklist.ts
+          deno run --allow-net https://deno.land/x/cicd/post-PR-checklist-to-PR-history.ts
           deno run --allow-net https://deno.land/x/cicd/lint.ts
           # deno run --allow-net https://deno.land/x/cicd/security-scan.ts
           # deno run --allow-net https://deno.land/x/cicd/request-cla-signature.ts
