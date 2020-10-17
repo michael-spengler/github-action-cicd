@@ -1,3 +1,3 @@
-name: "Continuous Deployment"
+name: "Continuous Deployment (CICD)"
 description: "Continuous Integration and Continuous Deployment made easy. Activate CI / CD steps provided by the CICD Deno Module."
 author: "michael-spengler"
