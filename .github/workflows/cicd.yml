@@ -20,6 +20,6 @@ jobs:
           # deno run --allow-net https://deno.land/x/cicd/notify-via-slack.ts
           # deno run --allow-net https://deno.land/x/cicd/notify-via-discord.ts          
           # deno run --allow-net https://deno.land/x/cicd/publish-on-nest.land.ts          
-          # deno run --allow-net https://deno.land/x/cicd/generate-patch-release.ts                    
-          # deno run --allow-net https://deno.land/x/cicd/generate-minor-release.ts                    
-          # deno run --allow-net https://deno.land/x/cicd/generate-major-release.ts                                        
+          # deno run --allow-net https://deno.land/x/cicd/create-patch-release.ts                    
+          # deno run --allow-net https://deno.land/x/cicd/create-minor-release.ts                    
+          # deno run --allow-net https://deno.land/x/cicd/create-major-release.ts                                        
