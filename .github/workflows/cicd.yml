@@ -1,6 +1,7 @@
-name: "trigger ci / cd related steps"
+name: "trigger ci / cd steps"
 on:
-  pull_request:
+  issue_comment:
+    types: [created]
 jobs:
   cicdsteps:
     runs-on: ubuntu-latest
@@ -10,5 +11,9 @@ jobs:
          deno-version: v1.x
       - run: |
           deno --version
-          # deno run --allow-net https://deno.land/x/cicd/contributor-guideline-confirmation.ts
-          # deno run --allow-net https://deno.land/x/cicd/scan-for-security-vulnerabilities.ts
+          deno run --allow-net https://deno.land/x/cicd/lint.ts
+          # deno run --allow-net https://deno.land/x/cicd/security-scan.ts
+          # deno run --allow-net https://deno.land/x/cicd/request-cla-signature.ts
+          # deno run --allow-net https://deno.land/x/cicd/request-dco-signature.ts
+          # deno run --allow-net https://deno.land/x/cicd/notify-via-telegram.ts
+          # deno run --allow-net https://deno.land/x/cicd/notify-via-slack.ts
