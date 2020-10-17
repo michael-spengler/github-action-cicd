@@ -1,3 +1,3 @@
-# Using a Deno based GitHub Action for CICD
+# GitHub Action for CICD
 
-This is a demo for how https://deno.land/x/cicd could be used. Comment on an issue and check the Actions tab after that.
+You can [activate CI / CD related steps](https://github.com/michael-spengler/github-action-cicd/blob/main/.github/workflows/cicd.yml#L12) which are then executed by the [CICD Deno module](https://deno.land/x/cicd).
