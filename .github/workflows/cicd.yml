@@ -18,3 +18,8 @@ jobs:
           # deno run --allow-net https://deno.land/x/cicd/request-dco-signature.ts
           # deno run --allow-net https://deno.land/x/cicd/notify-via-telegram.ts
           # deno run --allow-net https://deno.land/x/cicd/notify-via-slack.ts
+          # deno run --allow-net https://deno.land/x/cicd/notify-via-discord.ts          
+          # deno run --allow-net https://deno.land/x/cicd/publish-on-nest.land.ts          
+          # deno run --allow-net https://deno.land/x/cicd/generate-patch-release.ts                    
+          # deno run --allow-net https://deno.land/x/cicd/generate-minor-release.ts                    
+          # deno run --allow-net https://deno.land/x/cicd/generate-major-release.ts                                        
