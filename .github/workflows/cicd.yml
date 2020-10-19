@@ -1,7 +1,7 @@
 name: "trigger ci / cd steps"
 on:
-  issue_comment: # change this depending on which event you want to react
-    types: [created] 
+  pull_request: # change this depending on which event you want to react
+    types: [opened] 
 jobs:
   cicdsteps:
     runs-on: ubuntu-latest
@@ -11,7 +11,7 @@ jobs:
          deno-version: v1.x
       - run: | # uncomment the specific steps below which you want to be executed 
           deno --version
-          deno run --allow-net https://deno.land/x/cicd/post-PR-checklist.ts ${{ secret.pat }}
+          deno run --allow-net https://deno.land/x/cicd/post-PR-checklist.ts ${{ secrets.pat }} ${{ github.repository }} ${{ github.event.pull_request.number }}
           # deno run --allow-net https://deno.land/x/cicd/lint.ts
           # deno run --allow-net https://deno.land/x/cicd/security-scan.ts
           # deno run --allow-net https://deno.land/x/cicd/request-cla-signature.ts
@@ -22,6 +22,6 @@ jobs:
           # deno run --allow-net https://deno.land/x/cicd/create-major-release.ts
           # deno run --allow-net https://deno.land/x/cicd/notify-via-telegram.ts
           # deno run --allow-net https://deno.land/x/cicd/notify-via-slack.ts
-          # deno run --allow-net https://deno.land/x/cicd/notify-via-discord.ts                                                   
-
-
+          # deno run --allow-net https://deno.land/x/cicd/notify-via-discord.ts      
+          
+# https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions#github-context
