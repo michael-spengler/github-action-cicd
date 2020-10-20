@@ -1,5 +1,8 @@
 # CICD with Deno
-You can [activate CI / CD related steps](https://github.com/michael-spengler/github-action-cicd/blob/main/.github/workflows/cicd.yml#L12) which are then executed by the [CICD Deno module](https://deno.land/x/cicd).
+This workflow allows you to use the [CICD Deno module](https://deno.land/x/cicd)
+
+# Usage 
+Copy [this workflow file](https://github.com/michael-spengler/github-action-cicd/blob/main/.github/workflows/cicd.yml) to your repo (to the github/workflows folder) and uncomment the steps you would like to be executed.
 
 ## Contribute
 Contributions are welcome.
